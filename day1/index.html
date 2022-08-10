@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurul Dwi Pajriah</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="app" class="justify-center 
+                        grid place-items-start">
+        <h1>Data Kegiatan Saya</h1>
+        <ul v-for="(kegiatan, index) in dataKegiatan" 
+            :key="index"
+            class="flex flex-col gap-y-1">
+            <li class="bg-blue-300 rounded-lg p-2"
+                @click="getDataKegiatan(kegiatan)">{{ kegiatan }}
+                <span class="text-red-900 font-bold cursor-pointer"
+                @click="hapusKegiatan(index)">x</span>
+            </li>
+        </ul>
+        <input v-model="kegiatan"
+                class="border-[1px] rounded-full 
+                    hover:drop-shadow 
+                    hover:border-white 
+                    focus:drop-shadow-md
+                    focus:outline-none
+                    file:border file:border-solid" 
+                type="text" id="input" 
+                placeholder="Masukkan Kegiatan Anda">
+        <button @click="tambahKegiatan()"
+                id="btn-2" 
+                class="bg-gray-400 rounded-full p-4">
+                Tambah Kegiatan</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

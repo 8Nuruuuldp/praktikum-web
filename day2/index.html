@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurul Dwi Pajriah</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app" 
+    class="h-screen w-full flex justify-center items-center flex-col gap-y-4">
+        <img :src="image" alt="" class="h-30 w-30 rounded-full">
+        <h1> {{ nameUser }} {{ lastName }}</h1>
+        <button @click="generateMakanan()" class="">Generate Makanan</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
